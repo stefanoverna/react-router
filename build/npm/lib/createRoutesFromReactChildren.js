@@ -1,6 +1,6 @@
-"use strict";
-
 /* jshint -W084 */
+
+"use strict";
 
 var React = require("react");
 var assign = require("react/lib/Object.assign");

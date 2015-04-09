@@ -1,6 +1,6 @@
 "use strict";
 
-var _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
+var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
 
@@ -23,20 +23,16 @@ var StaticLocation = (function () {
     this.path = path;
   }
 
-  _prototypeProperties(StaticLocation, null, {
+  _createClass(StaticLocation, {
     getCurrentPath: {
       value: function getCurrentPath() {
         return this.path;
-      },
-      writable: true,
-      configurable: true
+      }
     },
     toString: {
       value: function toString() {
         return "<StaticLocation path=\"" + this.path + "\">";
-      },
-      writable: true,
-      configurable: true
+      }
     }
   });
 
